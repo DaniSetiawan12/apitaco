@@ -28,9 +28,11 @@ exports.registrasiUser = (data) =>
 
 exports.Menulogin = (data) =>
     new Promise(async (resolve, reject)=>{
+      console.log(data)
         user.findOne({
             username: data.username
         }).then(res=> {
+            console.log(res)
             if(res) {
                 user.findOne({
                     password: data.password,
