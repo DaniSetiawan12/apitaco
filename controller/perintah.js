@@ -160,8 +160,8 @@ exports.getHistory = (userId) =>
 
 exports.hapusData = (id) =>
   new Promise(async (resolve, reject) => {
-    await history.remove({
-      idPetShop: ObjectId(id)
+    await historyModel.remove({
+      _id: ObjectId(id)
     })
       .then(r => {
         resolve(response.commonSuccessMsg("Berhasil menghapus data"))

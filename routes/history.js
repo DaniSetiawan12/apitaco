@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const history = require('../controller/history')
+const history = require('../controller/perintah')
 
 router.post("/input", (req, res) => {
     history.inputHistory(req.body)

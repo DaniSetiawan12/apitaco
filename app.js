@@ -43,6 +43,7 @@ taco.use(bodyParser.urlencoded({
 
 taco.use('/user', require('./routes/user'))
 taco.use('/perintah', require('./routes/perintah'))
+taco.use('/histori', require('./routes/history'))
 
 taco.listen(port, function () {
   console.log('Server berjalan di port '+ port)
